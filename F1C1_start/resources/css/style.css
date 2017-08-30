@@ -5,6 +5,12 @@ html {
   font-size: 16px;
 }
 
+body{
+  max-width:1600px;
+  margin:0 auto;
+  padding:0;
+}
+
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -15,7 +21,7 @@ html {
 }
 
 .button {
-  border-radius: 4px;
+  border-radius:4px;
   background-color: #4a4a4a;
   color: white;
 }
@@ -29,10 +35,20 @@ html {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 480px) {
   .main-content {
     top: 2.5625rem;
   }
+
+  body{
+    max-width:480px;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width: 1024px) {
+  body{
+    max-width:1024px;
+    }
 }
 
 /* Header */
@@ -41,6 +57,7 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
+  max-width:1600px;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
 }
@@ -75,14 +92,24 @@ header .icon {
   padding-left: .75rem;
 }
 
+nav.desktop>ul>li>a.button {
+  display:none;
+}
+
 header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 480px) {
   header .desktop {
     display: none;
   }
+
+  header {
+    max-width:480px;
+  }
+
+
 
   header .mobile {
     display: block;
@@ -111,6 +138,18 @@ header .mobile {
     color: white;
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 1024px)
+{
+nav.desktop>ul>li>a.button {
+display: list-item;
+padding: .1875rem .5rem;
+background-color: #9dc20b;
+line-height: 1.6;
+color: white;
+}
+}
+
 
 /* Sign Up Section */
 
